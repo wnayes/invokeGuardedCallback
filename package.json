@@ -1,0 +1,22 @@
+{
+  "name": "invoke-guarded-callback",
+  "version": "1.0.0",
+  "description": "\"Pause on exceptions\"-friendly code execution",
+  "main": "./index.mjs",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test-web": "http-server ./"
+  },
+  "keywords": [
+    "try",
+    "catch",
+    "pause",
+    "on",
+    "exceptions"
+  ],
+  "author": "Will Nayes",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>invokeGuardedCallback Test Page</title>
+    </head>
+    <body>
+        <h1>invokeGuardedCallback Tests</h1>
+
+        <script type="module">
+            import * as mod from '../index.mjs';
+            import { executeTests } from "./tests.mjs";
+
+            let count = 0;
+            function addTestResult(passed) {
+                count++;
+                var msgEl = document.createElement("p");
+                msgEl.textContent = "Test " + count + (passed ? " Passed" : " Failed!");
+                document.body.appendChild(msgEl);
+            }
+
+            function runTest(fn) {
+                addTestResult(fn());
+            }
+
+            executeTests(runTest, mod);
+          </script>
+    </body>
+</html>
